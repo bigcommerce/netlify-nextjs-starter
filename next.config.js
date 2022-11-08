@@ -1,7 +1,5 @@
-const withTM = require('@vercel/examples-ui/transpile')();
-
 /** @type {import('next').NextConfig} */
-module.exports = withTM({
+module.exports = {
   reactStrictMode: true,
   i18n: {
     locales: ['en-US'],
@@ -10,4 +8,4 @@ module.exports = withTM({
   images: {
     domains: ['images.contentstack.io', 'cdn11.bigcommerce.com'],
   },
-});
+};

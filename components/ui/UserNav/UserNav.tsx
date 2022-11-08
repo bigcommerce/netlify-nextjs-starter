@@ -19,7 +19,7 @@ const UserNav: FC<Props> = ({ className }) => {
   const { cart } = useCart();
 
   if (cart) {
-    itemsCount = cart?.lineItems.reduce(countItem, 0) ?? 0;
+    itemsCount = cart?.lineItems?.reduce(countItem, 0) ?? 0;
   }
 
   return (

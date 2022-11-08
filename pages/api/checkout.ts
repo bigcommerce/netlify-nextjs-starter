@@ -1,6 +1,6 @@
+import { parse } from 'cookie';
 import { NextApiRequest, NextApiResponse } from 'next';
 import BigCommerce from 'node-bigcommerce';
-import { parseString } from 'set-cookie-parser';
 
 export default async function checkout(req: NextApiRequest, res: NextApiResponse) {
   const { headers } = req;
@@ -16,8 +16,7 @@ export default async function checkout(req: NextApiRequest, res: NextApiResponse
     responseType: 'json',
   });
 
-  // @ts-ignore
-  const { bc_cart } = parseString(headers.cookie);
+  const { bc_cart } = parse(headers.cookie ?? '');
 
   try {
     const { data } = await bigCommerce.get<{ data: unknown }>(

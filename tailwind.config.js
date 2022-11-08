@@ -1,16 +1,16 @@
+const vercelPreset = require('@vercel/examples-ui/tailwind');
+
 module.exports = {
-  presets: [require('@vercel/examples-ui/tailwind')],
+  presets: [vercelPreset],
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     'node_modules/@vercel/examples-ui/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        display: ['Inter', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
-      },
+    fontFamily: {
+      sans: ['Inter', 'system-ui', 'sans-serif'],
+      serif: ['Inter', 'system-ui', 'sans-serif'],
     },
   },
 };

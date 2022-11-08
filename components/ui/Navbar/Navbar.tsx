@@ -18,7 +18,7 @@ const Navbar: FC<ProductViewProps> = ({ data }) => {
     <div className={cn(s.root)}>
       <Container>
         <div className="justify-between items-center  px-2 py-2 md:py-2  text-center">
-          <Link href="/" passHref>
+          <Link href="/">
             <span className="cursor-pointer inline-block">
               <Logo />
             </span>
@@ -54,11 +54,11 @@ const Navbar: FC<ProductViewProps> = ({ data }) => {
               </a>
             ))}
             <div className="flex-1">
-              <Link href="/">
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a className="cursor-pointer hover:text-gray-600 uppercase font-medium text-sm">
-                  Search
-                </a>
+              <Link
+                className="cursor-pointer hover:text-gray-600 uppercase font-medium text-sm"
+                href="/"
+              >
+                Search
               </Link>
             </div>
             <UserNav />

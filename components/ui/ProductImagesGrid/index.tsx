@@ -17,6 +17,10 @@ const ProductImagesGrid = ({ product }: any): ReactElement => {
               priority={idx === 0}
               quality="85"
               src={image?.node?.urlOriginal}
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
               width={600}
             />
           </li>

@@ -1,3 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [template.environment]
     BIGCOMMERCE_STOREFRONT_API_URL="BIGCOMMERCE_STOREFRONT_API_URL"
     BIGCOMMERCE_STOREFRONT_API_TOKEN="BIGCOMMERCE_STOREFRONT_API_TOKEN"

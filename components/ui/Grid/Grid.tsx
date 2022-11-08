@@ -75,12 +75,7 @@ const Grid: FC<Props> = ({ className, children, variant, data = {} }) => {
             <div className="flex flex-col items-center text-center mb-10" key={`item__${i}`}>
               <div className="mb-2">
                 {item?.img?.url && (
-                  <Image
-                    alt={item.img.title}
-                    layout="fixed"
-                    src={item.img.url}
-                    {...meassureProps}
-                  />
+                  <Image alt={item.img.title} src={item.img.url} {...meassureProps} />
                 )}
               </div>
               {item.title && (
@@ -89,16 +84,11 @@ const Grid: FC<Props> = ({ className, children, variant, data = {} }) => {
               {item.description && (
                 <div className="mb-2 px-4" dangerouslySetInnerHTML={{ __html: item.description }} />
               )}
-              <Link href={item?.link?.url ? item?.link?.url : '/'} passHref>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a
-                  className="mt-4 uppercase font-semibold tracking-wide
-            text-xs text-slate-900 bg-white rounded-full
-            px-4 py-3 border  border-slate-400 hover:border-black
-            transition ease-linear duration-150"
-                >
-                  {item?.link?.title}
-                </a>
+              <Link
+                className="mt-4 uppercase font-semibold tracking-wide text-xs text-slate-900 bg-white rounded-full px-4 py-3 border border-slate-400 hover:border-black transition ease-linear duration-150"
+                href={item?.link?.url ? item?.link?.url : '/'}
+              >
+                {item?.link?.title}
               </Link>
             </div>
           ))}

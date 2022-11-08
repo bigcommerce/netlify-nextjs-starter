@@ -1,4 +1,4 @@
-import cn from 'classnames';
+import classnames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -37,26 +37,30 @@ const CartItem = ({
 
   return (
     <li
-      className={cn(s.root, {
+      className={classnames(s.root, {
         'opacity-50 pointer-events-none': removing,
       })}
       {...rest}
     >
       <div className="flex flex-row space-x-4 py-4">
         <div className="w-16 h-16 bg-ecru-sand relative overflow-hidden cursor-pointer z-0">
-          <Link href={`/product/${item.path}`} passHref={true}>
+          <Link href={`/product/${item.path}`}>
             <Image
               alt={item.variant.image?.altText}
               className={s.productImage}
               height={150}
               src={item.variant.image?.url}
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
               unoptimized
               width={150}
             />
           </Link>
         </div>
         <div className="flex-1 flex flex-col text-base">
-          <Link href={`/product/${item.path}`} passHref={true}>
+          <Link href={`/product/${item.path}`}>
             <span className={s.productName}>{item.name}</span>
           </Link>
           {options && options.length > 0 && (
@@ -90,13 +94,6 @@ const CartItem = ({
           <span>222</span>
         </div>
       </div>
-      {/* // <Quantity */}
-      {/* //   value={quantity} */}
-      {/* //   handleRemove={handleRemove} */}
-      {/* //   handleChange={handleChange} */}
-      {/* //   increase={() => increaseQuantity(1)} */}
-      {/* //   decrease={() => increaseQuantity(-1)} */}
-      {/* // /> */}
     </li>
   );
 };

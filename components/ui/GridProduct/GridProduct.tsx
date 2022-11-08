@@ -68,6 +68,10 @@ const GridProduct: FC<Props> = ({ className, children, variant, data = {} }) => 
                     alt={item.primary_image?.url_standard}
                     height={200}
                     src={item.primary_image?.url_standard || ''}
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
                     width={200}
                   />
                 )}
@@ -79,20 +83,18 @@ const GridProduct: FC<Props> = ({ className, children, variant, data = {} }) => 
                 <div
                   className="mb-2 px-4"
                   dangerouslySetInnerHTML={{
-                    __html: item?.description.substring(0, 100),
+                    __html: `${item?.description.substring(0, 100)}...`,
                   }}
                 />
               )}
-              <Link href={`product${item?.custom_url?.url}`} passHref>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a
-                  className="mt-4 uppercase font-semibold tracking-wide
+              <Link
+                className="mt-4 uppercase font-semibold tracking-wide
             text-xs text-slate-900 bg-white rounded-full
             px-4 py-3 border  border-slate-400 hover:border-black
             transition ease-linear duration-150"
-                >
-                  Shop Now
-                </a>
+                href={`product${item?.custom_url?.url}`}
+              >
+                Shop Now
               </Link>
             </div>
           ))}

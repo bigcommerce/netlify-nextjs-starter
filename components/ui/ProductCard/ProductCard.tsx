@@ -32,7 +32,7 @@ export const ProductCard: FC<ProductSliderProps> = ({ product }) => {
       <div className={s.productCard}>
         <div className={s.productImageContainer}>
           {image && (
-            <Image alt={product.name} className={s.productImage} layout="fill" src={image} />
+            <Image alt={product.name} className={s.productImage} fill sizes="100vw" src={image} />
           )}
         </div>
         <div className={s.name}>{name}</div>

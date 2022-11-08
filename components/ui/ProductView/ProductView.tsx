@@ -41,6 +41,10 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
               height={900}
               quality="75"
               src={product?.product?.images?.edges[0]?.node?.urlOriginal}
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
               width={800}
             />
           </div>
