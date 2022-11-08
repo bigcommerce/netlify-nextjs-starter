@@ -1,0 +1,22 @@
+{
+  "name": "Next.js Starter for BigCommerce, Contentstack, and Vercel",
+  "short_name": "Next.js BigC Contentstack Starter",
+  "description": "A simple Next.js starter built to showcase composable commerce utilizing BigCommerce, Contentstack, and Vercel.",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#fff",
+  "background_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

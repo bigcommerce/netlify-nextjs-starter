@@ -1,0 +1,46 @@
+/*
+Prefers intrinsic styling inside each component (rating, flag, etc)
+and only doing *positioning* in this module.
+*/
+
+.__cardWidthValue {
+  @apply w-40 lg:w-80;
+}
+
+.__cardHeightValue {
+  @apply h-40 lg:h-80;
+}
+
+.productCard {
+  @apply __cardWidthValue;
+  @apply  transition-transform ease-linear cursor-pointer text-left;
+}
+
+.price {
+  @apply text-sm;
+}
+
+.name {
+  @apply w-3/4 text-ellipsis;
+  @apply font-bold;
+
+}
+
+.productImageContainer {
+  @apply __cardWidthValue;
+  @apply __cardHeightValue;
+  @apply rounded-md  relative;
+}
+
+.productImage {
+  @apply transform transition-transform duration-200;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+.productFlag {
+  @apply absolute left-2 top-2;
+}
+
