@@ -17,33 +17,14 @@ These are the first steps you need to complete to be able to follow instructions
 ## Let's Get Started! 
 <br/>
 
-1. Step One: ✅ You're here! The first step is being in this repo and hitting the "Deploy" button at the bottom of this ReadME. <br/>
+1. Step One: ✅ You're here! The first step is being in this repo and hitting the "Deploy to Netlify" button at the bottom of this ReadME. <br/>
 
-1. Hit the "Deploy" button.<br/>
-![](images/deploy.png)
-<br/>
+1. You need a BigCommerce store! Login or Sign Up to set up a new BigCommerce store to use! Once you've logged in or signed up, follow [these instrucitons](https://support.bigcommerce.com/s/article/Store-API-Accounts?language=en_US#creating) to obtain your BigCommerce API credentials. <br/>
 
-1. Login to your Vercel Account. If you don't have a Vercel account, make one now! 
 
-1. Hit "GitHub", or whichever platform you are going to use, under "Create Git Repo..." <br/>
-![](images/choose_stack.png)
-<br/>
+1. Next, create an account or login to [ContentStack](https://app.contentstack.com/?_gl=1*2rimkv*_gcl_aw*R0NMLjE2NjU3MDM5NDMuQ2p3S0NBanc3cDZhQmhCaUVpd0E4M2ZHdXNVa1RHRTdOWjZaQ0RoVWJEbjVNMm1odTAwQzRiOW52SDRoZEp2eHJnTGdXYlFLQllLOE1Cb0NPdzBRQXZEX0J3RQ..#!/login). 
 
-1. Enter a name for this repository (it's going to clone itself into your repository platform account) <br/>
-![](images/create_a_repo.png)
-<br/>
-
-1. Repository being created.. <br/>
-
-1. Login or Sign Up to set up a new BigCommerce store to use! <br/>
-![](images/add_bc_to_vercel.png)
-<br/>
-
-1. The deploy process begins! This may take up to 10 minutes.<br/>
-
-1. Create an account or login to [ContentStack](https://app.contentstack.com/?_gl=1*2rimkv*_gcl_aw*R0NMLjE2NjU3MDM5NDMuQ2p3S0NBanc3cDZhQmhCaUVpd0E4M2ZHdXNVa1RHRTdOWjZaQ0RoVWJEbjVNMm1odTAwQzRiOW52SDRoZEp2eHJnTGdXYlFLQllLOE1Cb0NPdzBRQXZEX0J3RQ..#!/login). 
-
-1. Create a Stack by selecting "+ New Stack", title it, add a description, and click "Create". <br/>
+1. Create a "Stack" by selecting "+ New Stack", title it, add a description, and click "Create". <br/>
 
 1. Now that your Stack has been created, let's identify your API keys. Navigate to 
     the "Settings" icon on your lefthand panel. <br/>
@@ -63,16 +44,45 @@ These are the first steps you need to complete to be able to follow instructions
     If successful, you should see something like this: 
     ![](images/new_tokens.png)
 
-1. Add your ContentStack API keys under the "Configure Project" once the fields become available after initial deployment. <br/>
-![](images/configure_project.png)
+1. Hang on to these variables, you'll need them in an upcoming step. <br/>
 <br/>
 
-1. Hit the "Deploy" button under "Configure Project" once your keys are entered.
+1. Now, back to this ReadME file you're in right now! Hit the "Deploy to Netlify" button found at the bottom of the page.<br/>
+![](images/deploy.png)
+<br/>
+
+1. Once you're brought to the page pictured below, select "Connect to Github" 
+![](images/connect_to_github.png)
+<br/>
+
+1. Once you're brought to this page (seen in screenshots below), give your repository a unique name and enter all of your BigCommerce and ContentStack API credentials. <br/>
+![](images/variables_one.png)
+![](images/variables_two.png)
+<br/>
+
+1. Save and Deploy! <br/>
+![](images/save_and_deploy.png)
+<br/>
+
+1. The deploy process begins! This may take up to 10 minutes, and will bring you to a page that looks like this: 
+![](images/deploying.png)
+<br/>
+
+
+1. You can watch your project's progress by clicking on the tab pictured below: 
+![](images/deploy_progress.png)
+<br/>
+
+1. If you click into that tab, once your build is successfully complete, you'll see something like this: 
+![](images/build_complete.png)
+<br/>
+
+1. To view your site, click "Open Production Deploy" or "Permalink" - both will bring you to your deployed site! 
+![](images/view_deployed_link.png)
+<br/>
 
 1. You're deployed! Great job! 👏 
-
-
-
+<br/>
 
 ------ 
 <br/>
